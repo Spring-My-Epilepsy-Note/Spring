@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>869320156859-r132fk0vs2c1m0p7jjusgvcn9qdbkavn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.869320156859-r132fk0vs2c1m0p7jjusgvcn9qdbkavn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAampN3Fk5Ytor2UhLT_OAJUpH4oF60rBI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>869320156859</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.watching.Spring</string>
+	<key>PROJECT_ID</key>
+	<string>spring-5a71c</string>
+	<key>STORAGE_BUCKET</key>
+	<string>spring-5a71c.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:869320156859:ios:b605d2ecf4841829dfab9e</string>
+</dict>
+</plist>
