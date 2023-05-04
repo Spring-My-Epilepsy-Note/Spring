@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04755A532A038268002F4D8C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04755A522A038268002F4D8C /* HomeView.swift */; };
+		04755A552A038272002F4D8C /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04755A542A038272002F4D8C /* ChartView.swift */; };
+		04755A572A038286002F4D8C /* MedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04755A562A038286002F4D8C /* MedicineView.swift */; };
 		7E5720712A0235A100C0D049 /* SpringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720702A0235A100C0D049 /* SpringApp.swift */; };
 		7E5720732A0235A100C0D049 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720722A0235A100C0D049 /* ContentView.swift */; };
 		7E5720752A0235A200C0D049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5720742A0235A200C0D049 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		04755A522A038268002F4D8C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		04755A542A038272002F4D8C /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		04755A562A038286002F4D8C /* MedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineView.swift; sourceTree = "<group>"; };
 		7E57206D2A0235A100C0D049 /* Spring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5720702A0235A100C0D049 /* SpringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringApp.swift; sourceTree = "<group>"; };
 		7E5720722A0235A100C0D049 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +179,9 @@
 			isa = PBXGroup;
 			children = (
 				7E5720ED2A024F6C00C0D049 /* SomeView.swift */,
+				04755A522A038268002F4D8C /* HomeView.swift */,
+				04755A542A038272002F4D8C /* ChartView.swift */,
+				04755A562A038286002F4D8C /* MedicineView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 				7E5720EE2A024F6C00C0D049 /* SomeView.swift in Sources */,
 				7E5720F02A024F7500C0D049 /* SomeViewModel.swift in Sources */,
 				7E5720EC2A024F5700C0D049 /* Model.swift in Sources */,
+				04755A552A038272002F4D8C /* ChartView.swift in Sources */,
+				04755A532A038268002F4D8C /* HomeView.swift in Sources */,
 				7E5720732A0235A100C0D049 /* ContentView.swift in Sources */,
+				04755A572A038286002F4D8C /* MedicineView.swift in Sources */,
 				7E5720712A0235A100C0D049 /* SpringApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
