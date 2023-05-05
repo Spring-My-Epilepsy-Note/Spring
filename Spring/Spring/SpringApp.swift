@@ -31,13 +31,19 @@ struct SpringApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        LoginView()
-              .onAppear {
-          GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+          if userViewModel.isLoggedIn {
+              ContentView()
+          }else {
+              LoginView()
+                    .onAppear {
+                GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                }
+            }    .onOpenURL { url in
+                GIDSignIn.sharedInstance.handle(url)
+            }.environmentObject(userViewModel)
           }
-      }    .onOpenURL { url in
-          GIDSignIn.sharedInstance.handle(url)
-      }.environmentObject(userViewModel)
+      
+  
       }
     }
   }

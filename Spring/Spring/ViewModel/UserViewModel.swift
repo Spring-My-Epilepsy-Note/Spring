@@ -21,8 +21,6 @@ class UserViewModel: NSObject, ObservableObject {
     
     let database = Firestore.firestore()
     let currentUser = Auth.auth().currentUser
-    var currentNonce: String? = nil
-    var window: UIWindow? = nil
     
     @Published var loginState: LoginState = .logout
     @Published var userInfo: User = User()

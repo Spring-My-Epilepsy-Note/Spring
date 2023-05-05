@@ -8,6 +8,8 @@
 import Foundation
 import FirebaseFirestoreSwift
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Hashable, Codable {
     @DocumentID var id: String?
+    var userNickname: String = ""
+    var userEmail: String =  ""
 }
