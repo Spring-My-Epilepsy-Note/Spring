@@ -7,10 +7,12 @@
 
 import SwiftUI
 import AuthenticationServices
+import AlertToast
 
 struct LoginView: View {
     @EnvironmentObject var userViewModel: UserViewModel
-
+    @State var isProcessing: Bool = false
+    
     var body: some View {
         ZStack{
             Color("MainColor")
@@ -28,8 +30,11 @@ struct LoginView: View {
               
                 VStack{
                     Button {
+                       isProcessing = true
                         Task {
                             await userViewModel.googleLogin()
+                            isProcessing = false
+
                         }
                     } label: {
                         Text("구글로 로그인")
@@ -48,6 +53,8 @@ struct LoginView: View {
                     }
                     .background(.white)
                     .cornerRadius(25)
+                    .disabled(isProcessing)
+
                     
                     Button {
                             print("애플로 로그인 버튼 누름")
@@ -69,12 +76,14 @@ struct LoginView: View {
                     }
                     .background(.black)
                     .cornerRadius(25)
-                    
+                    .disabled(isProcessing)
+
                     
                 }
+            }//VStack
+            .toast(isPresenting: $isProcessing) {
+                AlertToast(displayMode: .alert, type: .loading)
             }
-            
-          
         }
 
     }

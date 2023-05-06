@@ -40,11 +40,10 @@ struct SpringApp: App {
                 }
             }    .onOpenURL { url in
                 GIDSignIn.sharedInstance.handle(url)
-            }.environmentObject(userViewModel)
+            }
           }
-      
-  
       }
+      .environmentObject(userViewModel)
     }
   }
 }

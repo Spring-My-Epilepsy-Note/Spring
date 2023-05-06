@@ -19,16 +19,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>spring-5a71c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:869320156859:ios:b605d2ecf4841829dfab9e</string>
+	<key>DATABASE_URL</key>
+	<string>https://spring-5a71c-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

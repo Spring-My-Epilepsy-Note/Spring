@@ -14,7 +14,11 @@
 		04877A352A04DA3A0094C5FA /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04877A342A04DA3A0094C5FA /* UserViewModel.swift */; };
 		04877A382A04DA9C0094C5FA /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 04877A372A04DA9C0094C5FA /* GoogleSignIn */; };
 		04877A3D2A04E2280094C5FA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04877A3C2A04E2280094C5FA /* User.swift */; };
-		04877A3F2A04FDF40094C5FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04877A3E2A04FDF40094C5FA /* GoogleService-Info.plist */; };
+		04877A432A05DF180094C5FA /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 04877A422A05DF180094C5FA /* AlertToast */; };
+		04877A452A05E9BC0094C5FA /* MypageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04877A442A05E9BC0094C5FA /* MypageView.swift */; };
+		04877A472A05EEA40094C5FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04877A462A05EEA30094C5FA /* GoogleService-Info.plist */; };
+		04877A492A05F2FA0094C5FA /* MypageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04877A482A05F2FA0094C5FA /* MypageButton.swift */; };
+		04877A4B2A05F3A40094C5FA /* LogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04877A4A2A05F3A40094C5FA /* LogoutAlert.swift */; };
 		7E5720712A0235A100C0D049 /* SpringApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720702A0235A100C0D049 /* SpringApp.swift */; };
 		7E5720732A0235A100C0D049 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720722A0235A100C0D049 /* ContentView.swift */; };
 		7E5720752A0235A200C0D049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5720742A0235A200C0D049 /* Assets.xcassets */; };
@@ -65,7 +69,10 @@
 		04877A342A04DA3A0094C5FA /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		04877A3B2A04DC460094C5FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		04877A3C2A04E2280094C5FA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		04877A3E2A04FDF40094C5FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04877A442A05E9BC0094C5FA /* MypageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageView.swift; sourceTree = "<group>"; };
+		04877A462A05EEA30094C5FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		04877A482A05F2FA0094C5FA /* MypageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageButton.swift; sourceTree = "<group>"; };
+		04877A4A2A05F3A40094C5FA /* LogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutAlert.swift; sourceTree = "<group>"; };
 		7E57206D2A0235A100C0D049 /* Spring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5720702A0235A100C0D049 /* SpringApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringApp.swift; sourceTree = "<group>"; };
 		7E5720722A0235A100C0D049 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 				04877A382A04DA9C0094C5FA /* GoogleSignIn in Frameworks */,
 				7E5720992A02390F00C0D049 /* FirebaseAuth in Frameworks */,
 				7E57209F2A02390F00C0D049 /* FirebaseStorage in Frameworks */,
+				04877A432A05DF180094C5FA /* AlertToast in Frameworks */,
 				7E57209B2A02390F00C0D049 /* FirebaseFirestore in Frameworks */,
 				7E57209D2A02390F00C0D049 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -109,7 +117,7 @@
 		7E5720642A0235A100C0D049 = {
 			isa = PBXGroup;
 			children = (
-				04877A3E2A04FDF40094C5FA /* GoogleService-Info.plist */,
+				04877A462A05EEA30094C5FA /* GoogleService-Info.plist */,
 				7E57206F2A0235A100C0D049 /* Spring */,
 				7E5720812A0235A200C0D049 /* Spring Watch App */,
 				7E57206E2A0235A100C0D049 /* Products */,
@@ -190,10 +198,13 @@
 			isa = PBXGroup;
 			children = (
 				7E5720ED2A024F6C00C0D049 /* SomeView.swift */,
+				04877A322A04CE190094C5FA /* LoginView.swift */,
 				04755A522A038268002F4D8C /* HomeView.swift */,
+				04877A442A05E9BC0094C5FA /* MypageView.swift */,
+				04877A482A05F2FA0094C5FA /* MypageButton.swift */,
+				04877A4A2A05F3A40094C5FA /* LogoutAlert.swift */,
 				04755A542A038272002F4D8C /* ChartView.swift */,
 				04755A562A038286002F4D8C /* MedicineView.swift */,
-				04877A322A04CE190094C5FA /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -231,6 +242,7 @@
 				7E57209C2A02390F00C0D049 /* FirebaseFirestoreSwift */,
 				7E57209E2A02390F00C0D049 /* FirebaseStorage */,
 				04877A372A04DA9C0094C5FA /* GoogleSignIn */,
+				04877A422A05DF180094C5FA /* AlertToast */,
 			);
 			productName = Spring;
 			productReference = 7E57206D2A0235A100C0D049 /* Spring.app */;
@@ -285,6 +297,7 @@
 			packageReferences = (
 				7E5720972A02390F00C0D049 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				04877A362A04DA9C0094C5FA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				04877A412A05DF180094C5FA /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 7E57206E2A0235A100C0D049 /* Products */;
 			projectDirPath = "";
@@ -301,9 +314,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04877A472A05EEA40094C5FA /* GoogleService-Info.plist in Resources */,
 				7E5720782A0235A200C0D049 /* Preview Assets.xcassets in Resources */,
 				7E5720752A0235A200C0D049 /* Assets.xcassets in Resources */,
-				04877A3F2A04FDF40094C5FA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,9 +342,12 @@
 				04877A352A04DA3A0094C5FA /* UserViewModel.swift in Sources */,
 				04877A332A04CE190094C5FA /* LoginView.swift in Sources */,
 				04755A552A038272002F4D8C /* ChartView.swift in Sources */,
+				04877A4B2A05F3A40094C5FA /* LogoutAlert.swift in Sources */,
 				04755A532A038268002F4D8C /* HomeView.swift in Sources */,
 				7E5720732A0235A100C0D049 /* ContentView.swift in Sources */,
 				04755A572A038286002F4D8C /* MedicineView.swift in Sources */,
+				04877A492A05F2FA0094C5FA /* MypageButton.swift in Sources */,
+				04877A452A05E9BC0094C5FA /* MypageView.swift in Sources */,
 				7E5720712A0235A100C0D049 /* SpringApp.swift in Sources */,
 				04877A3D2A04E2280094C5FA /* User.swift in Sources */,
 			);
@@ -647,6 +663,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		04877A412A05DF180094C5FA /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		7E5720972A02390F00C0D049 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -662,6 +686,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 04877A362A04DA9C0094C5FA /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignIn;
+		};
+		04877A422A05DF180094C5FA /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04877A412A05DF180094C5FA /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 		7E5720982A02390F00C0D049 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;

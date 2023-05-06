@@ -28,7 +28,7 @@ class UserViewModel: NSObject, ObservableObject {
     // MARK: - 자동로그인을 위한 UserDefaults 변수
     @AppStorage("isLoggedIn") var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "isLoggedIn")
     @AppStorage("loginPlatform") var loginPlatform: String = (UserDefaults.standard.string(forKey: "loginPlatform") ?? "")
-    
+
     override init() {
         super.init()
         if self.isLoggedIn && currentUser != nil {
