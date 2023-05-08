@@ -22,9 +22,12 @@ struct UnregisterAlert: View {
                 Text("Spring에서 탈퇴 하시겠습니까?")
                     .font(.body)
                     .fontWeight(.semibold)
-
-                    .padding(25)
-                    .padding(.top, 10)
+                    .padding(EdgeInsets(top: 25, leading: 25, bottom: 0, trailing: 25))
+                Text("탈퇴 시 모든 회원정보가 즉시 삭제됩니다.")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+                    .foregroundColor(.gray)
+                    .padding(EdgeInsets(top:0, leading: 25, bottom: 25, trailing: 25))
 
                 HStack {
                     Button {

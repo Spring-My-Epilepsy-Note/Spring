@@ -39,40 +39,6 @@ class UserViewModel: NSObject, ObservableObject {
         }
     }
     
-//    func fetchUserInfo(uid: String) {
-//        let docRef = database.collection("User").document(uid)
-//        docRef.getDocument { document, error in
-//            if let document = document, document.exists {
-//                if let data = try? document.data(as: User.self) {
-//                    self.userInfo = data
-//                }
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
-//    }
-//    // MARK: - FireStore에 유저 정보 추가하는 함수
-//    func insertUserInFirestore(userEmail: String, userName: String) {
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        Task {
-//            do {
-//                let document = try await database.collection("User").document(uid).getDocument()
-//
-//                if document.exists {
-//                    try database.collection("User").document(uid).setData(from: document.data(as: User.self))
-//                } else {
-//                    try await database.collection("User").document(uid).setData([
-//                        "userEmail" : userEmail,
-//                        "userNickname" : userName
-//                    ])
-//                }
-//
-//                self.fetchUserInfo(uid: uid)
-//            } catch {
-//                print("\(#function) 파이어베이스 에러 : \(error.localizedDescription)")
-//            }
-//        }//Task
-//    }
     func fetchUserInfo(uid: String) {
         let docRef = database.collection("User").document(uid)
         docRef.getDocument { [weak self] document, error in
@@ -85,7 +51,7 @@ class UserViewModel: NSObject, ObservableObject {
                     }
                 }
             } else {
-                print("Document does not exist")
+                print("정보가 없습니다.")
             }
         }
     }
@@ -177,33 +143,30 @@ class UserViewModel: NSObject, ObservableObject {
         default: return
         }
     }
-//    func firebaseUserDelete(user: Fire) async -> Error? {
-//        return await withCheckedContinuation { continuation in
-//            user.delete { error in
-//                continuation.resume(returning: error)
-//            }
-//        }
-//    }
 
     func deleteAllUserData(id: String) async {
-        do {
-            // 유저의 사용자 정보를 삭제합니다.
-            print("회원정보 삭제중")
-            let _: Void = try await database.collection("User")
-                .document("\(id)").delete()
-        }
-        catch { print("catch Error: \(error.localizedDescription)"); return }
-    } // - deleteAllUserData
-    
-    func deleteUser() async {
-        // 파이어베이스 유저 삭제
-        print("회원탈퇴 눌림")
         let user = Auth.auth().currentUser
-        await deleteAllUserData(id: user?.uid ?? "")
-        // if let error = await firebaseUserDelete(user: user) {
-        //     return false
-        // }
+        
+        do {
+            print("회원정보 삭제중")
+            try await user?.delete()
+            let _: Void = try await database.collection("User").document(id).delete()
+            print("회원정보 삭제완료")
+        } catch {
+            print("Error deleting user: \(error.localizedDescription)")
+        }
+    }
+
+    func deleteUser() async {
+        print("회원탈퇴 눌림")
+        guard let user = Auth.auth().currentUser else {
+            return
+        }
+        
+        await deleteAllUserData(id: user.uid)
         logoutByPlatform()
     }
+
+    
 
 }
