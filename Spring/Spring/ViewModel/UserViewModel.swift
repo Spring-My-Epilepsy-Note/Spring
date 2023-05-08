@@ -11,6 +11,7 @@ import GoogleSignIn
 import FirebaseFirestore
 import FirebaseAuth
 
+
 enum LoginState: String {
     case googleLogin = "googleLogin"
     case appleLogin = "appleLogin"
@@ -25,10 +26,11 @@ class UserViewModel: NSObject, ObservableObject {
     @Published var loginState: LoginState = .logout
     @Published var userInfo: User = User()
     
+    
     // MARK: - 자동로그인을 위한 UserDefaults 변수
     @AppStorage("isLoggedIn") var isLoggedIn: Bool = UserDefaults.standard.bool(forKey: "isLoggedIn")
     @AppStorage("loginPlatform") var loginPlatform: String = (UserDefaults.standard.string(forKey: "loginPlatform") ?? "")
-
+    
     override init() {
         super.init()
         if self.isLoggedIn && currentUser != nil {
@@ -37,25 +39,64 @@ class UserViewModel: NSObject, ObservableObject {
         }
     }
     
+//    func fetchUserInfo(uid: String) {
+//        let docRef = database.collection("User").document(uid)
+//        docRef.getDocument { document, error in
+//            if let document = document, document.exists {
+//                if let data = try? document.data(as: User.self) {
+//                    self.userInfo = data
+//                }
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+//    }
+//    // MARK: - FireStore에 유저 정보 추가하는 함수
+//    func insertUserInFirestore(userEmail: String, userName: String) {
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Task {
+//            do {
+//                let document = try await database.collection("User").document(uid).getDocument()
+//
+//                if document.exists {
+//                    try database.collection("User").document(uid).setData(from: document.data(as: User.self))
+//                } else {
+//                    try await database.collection("User").document(uid).setData([
+//                        "userEmail" : userEmail,
+//                        "userNickname" : userName
+//                    ])
+//                }
+//
+//                self.fetchUserInfo(uid: uid)
+//            } catch {
+//                print("\(#function) 파이어베이스 에러 : \(error.localizedDescription)")
+//            }
+//        }//Task
+//    }
     func fetchUserInfo(uid: String) {
         let docRef = database.collection("User").document(uid)
-        docRef.getDocument { document, error in
+        docRef.getDocument { [weak self] document, error in
+            guard let self = self else { return }
+            
             if let document = document, document.exists {
                 if let data = try? document.data(as: User.self) {
-                    self.userInfo = data
+                    DispatchQueue.main.async {
+                        self.userInfo = data
+                    }
                 }
             } else {
                 print("Document does not exist")
             }
         }
     }
-    // MARK: - FireStore에 유저 정보 추가하는 함수
+
+
     func insertUserInFirestore(userEmail: String, userName: String) {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Task {
             do {
                 let document = try await database.collection("User").document(uid).getDocument()
-
+                
                 if document.exists {
                     try database.collection("User").document(uid).setData(from: document.data(as: User.self))
                 } else {
@@ -64,13 +105,16 @@ class UserViewModel: NSObject, ObservableObject {
                         "userNickname" : userName
                     ])
                 }
-
-                self.fetchUserInfo(uid: uid)
+                
+                DispatchQueue.main.async {
+                    self.fetchUserInfo(uid: uid)
+                }
             } catch {
                 print("\(#function) 파이어베이스 에러 : \(error.localizedDescription)")
             }
-        }//Task
+        }
     }
+
     // MARK: - 구글
     // 구글 로그인
     @MainActor
@@ -92,7 +136,7 @@ class UserViewModel: NSObject, ObservableObject {
             let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
             
             let user = try await Auth.auth().signIn(with: credential).user
-                 
+            
             self.insertUserInFirestore(userEmail: user.providerData.first?.email ?? "", userName: user.providerData.first?.displayName ?? "")
             
             setUserDefaults(.googleLogin)
@@ -103,8 +147,9 @@ class UserViewModel: NSObject, ObservableObject {
     }
     //MARK: - UserDefaults 값 저장
     private func setUserDefaults(_ loginState: LoginState) {
-        self.loginState = loginState
-        
+        DispatchQueue.main.async {
+            self.loginState = loginState
+        }
         if loginState == .logout {
             UserDefaults.standard.set(false, forKey: "isLoggedIn")
         } else {
@@ -129,9 +174,36 @@ class UserViewModel: NSObject, ObservableObject {
                 print("Error signing out: %@", error.localizedDescription)
             }
             
-            default: return
+        default: return
         }
     }
-}
-    
+//    func firebaseUserDelete(user: Fire) async -> Error? {
+//        return await withCheckedContinuation { continuation in
+//            user.delete { error in
+//                continuation.resume(returning: error)
+//            }
+//        }
+//    }
 
+    func deleteAllUserData(id: String) async {
+        do {
+            // 유저의 사용자 정보를 삭제합니다.
+            print("회원정보 삭제중")
+            let _: Void = try await database.collection("User")
+                .document("\(id)").delete()
+        }
+        catch { print("catch Error: \(error.localizedDescription)"); return }
+    } // - deleteAllUserData
+    
+    func deleteUser() async {
+        // 파이어베이스 유저 삭제
+        print("회원탈퇴 눌림")
+        let user = Auth.auth().currentUser
+        await deleteAllUserData(id: user?.uid ?? "")
+        // if let error = await firebaseUserDelete(user: user) {
+        //     return false
+        // }
+        logoutByPlatform()
+    }
+
+}

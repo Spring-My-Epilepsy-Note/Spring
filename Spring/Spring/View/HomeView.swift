@@ -20,7 +20,6 @@ struct HomeView: View {
                 Text("안녕하세요. \(userName) \(userViewModel.loginState.rawValue)")
                     .font(.headline)
                     .fontWeight(.semibold)
-                
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
