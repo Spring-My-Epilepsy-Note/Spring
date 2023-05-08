@@ -31,8 +31,8 @@
 		C5DD69562A08C6EA00A55756 /* AddConvulsionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */; };
 		C5DD69592A08CD0A00A55756 /* ConvDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */; };
 		C5DD695B2A08CD8200A55756 /* ProdromalSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */; };
-		C5DD695D2A08D03100A55756 /* ConvulsionMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */; };
-		C5DD695F2A08E13800A55756 /* ConvulsionTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */; };
+		C5DD695D2A08D03100A55756 /* ConvMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695C2A08D03100A55756 /* ConvMemoView.swift */; };
+		C5DD695F2A08E13800A55756 /* ConvTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695E2A08E13800A55756 /* ConvTriggerView.swift */; };
 		C5DD69612A08E37100A55756 /* HealthStateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69602A08E37100A55756 /* HealthStateMemoView.swift */; };
 /* End PBXBuildFile section */
 
@@ -84,8 +84,8 @@
 		C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConvulsionView.swift; sourceTree = "<group>"; };
 		C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvDurationView.swift; sourceTree = "<group>"; };
 		C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdromalSymptomsView.swift; sourceTree = "<group>"; };
-		C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionMemoView.swift; sourceTree = "<group>"; };
-		C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionTriggerView.swift; sourceTree = "<group>"; };
+		C5DD695C2A08D03100A55756 /* ConvMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvMemoView.swift; sourceTree = "<group>"; };
+		C5DD695E2A08E13800A55756 /* ConvTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvTriggerView.swift; sourceTree = "<group>"; };
 		C5DD69602A08E37100A55756 /* HealthStateMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStateMemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,8 +225,8 @@
 				C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */,
 				C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */,
 				C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */,
-				C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */,
-				C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */,
+				C5DD695C2A08D03100A55756 /* ConvMemoView.swift */,
+				C5DD695E2A08E13800A55756 /* ConvTriggerView.swift */,
 			);
 			path = AddConvulsionView;
 			sourceTree = "<group>";
@@ -347,14 +347,14 @@
 			files = (
 				7E5720EE2A024F6C00C0D049 /* SomeView.swift in Sources */,
 				C5DD695B2A08CD8200A55756 /* ProdromalSymptomsView.swift in Sources */,
-				C5DD695D2A08D03100A55756 /* ConvulsionMemoView.swift in Sources */,
+				C5DD695D2A08D03100A55756 /* ConvMemoView.swift in Sources */,
 				C5DD69592A08CD0A00A55756 /* ConvDurationView.swift in Sources */,
 				7E5720F02A024F7500C0D049 /* SomeViewModel.swift in Sources */,
 				7E5720EC2A024F5700C0D049 /* Model.swift in Sources */,
 				04755A552A038272002F4D8C /* ChartView.swift in Sources */,
 				04755A532A038268002F4D8C /* HomeView.swift in Sources */,
 				7E5720732A0235A100C0D049 /* ContentView.swift in Sources */,
-				C5DD695F2A08E13800A55756 /* ConvulsionTriggerView.swift in Sources */,
+				C5DD695F2A08E13800A55756 /* ConvTriggerView.swift in Sources */,
 				C5DD69562A08C6EA00A55756 /* AddConvulsionView.swift in Sources */,
 				04755A572A038286002F4D8C /* MedicineView.swift in Sources */,
 				C5DD69532A08C2A600A55756 /* AddRecordView.swift in Sources */,

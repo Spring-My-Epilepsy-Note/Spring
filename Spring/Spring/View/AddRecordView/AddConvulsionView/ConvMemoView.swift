@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ConvulsionMemoView: View {
+struct ConvMemoView: View {
     @State private var memoText: String = ""
     
     var body: some View {
@@ -27,8 +27,8 @@ struct ConvulsionMemoView: View {
     }
 }
 
-struct ConvulsionMemoView_Previews: PreviewProvider {
+struct ConvMemoView_Previews: PreviewProvider {
     static var previews: some View {
-        ConvulsionMemoView()
+        ConvMemoView()
     }
 }

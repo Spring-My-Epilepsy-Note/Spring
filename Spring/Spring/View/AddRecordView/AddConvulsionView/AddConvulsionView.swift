@@ -14,8 +14,8 @@ struct AddConvulsionView: View {
             // MARK: 1. 발작 지속 시간 입력 뷰 2. 전조 증상 선택 뷰 3. 특이사항 메모 뷰 4. 발작 유발 요인 선택 뷰
             ConvDurationView()
             ProdromalSymptomsView()
-            ConvulsionMemoView()
-            ConvulsionTriggerView()
+            ConvMemoView()
+            ConvTriggerView()
             
             Divider()
             
