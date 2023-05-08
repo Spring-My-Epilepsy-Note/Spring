@@ -28,8 +28,8 @@ struct ConvDurationView: View {
                         self.convulsionDuration = String(convulsionDuration.prefix(upTo: index))
                     }
                 }
-                .padding()
-                .overlay(Rectangle().stroke(Color.gray, lineWidth: 1))
+                .padding(5)
+                .overlay(Rectangle().stroke(Color.accentColor, lineWidth: 1))
                 .frame(width: 70)
             Text("분")
         }

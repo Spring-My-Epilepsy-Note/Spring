@@ -24,11 +24,11 @@ struct AddConvulsionView: View {
                 // TODO: AddRecordView에서 인덱스만큼 AddConvulsionView 호출
             } label: {
                 Text(" + 발작 기록 추가하기 ")
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
             }
             .frame(maxWidth: .infinity)
-            .background(RoundedRectangle(cornerRadius: 5).fill(Color.blue))
+            .background(RoundedRectangle(cornerRadius: 5).fill(Color.accentColor))
         }
     }
 }
