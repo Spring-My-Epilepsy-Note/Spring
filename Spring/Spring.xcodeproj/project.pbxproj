@@ -27,6 +27,13 @@
 		7E5720EC2A024F5700C0D049 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720EB2A024F5700C0D049 /* Model.swift */; };
 		7E5720EE2A024F6C00C0D049 /* SomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720ED2A024F6C00C0D049 /* SomeView.swift */; };
 		7E5720F02A024F7500C0D049 /* SomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5720EF2A024F7500C0D049 /* SomeViewModel.swift */; };
+		C5DD69532A08C2A600A55756 /* AddRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69522A08C2A600A55756 /* AddRecordView.swift */; };
+		C5DD69562A08C6EA00A55756 /* AddConvulsionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */; };
+		C5DD69592A08CD0A00A55756 /* ConvDurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */; };
+		C5DD695B2A08CD8200A55756 /* ProdromalSymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */; };
+		C5DD695D2A08D03100A55756 /* ConvulsionMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */; };
+		C5DD695F2A08E13800A55756 /* ConvulsionTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */; };
+		C5DD69612A08E37100A55756 /* HealthStateMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DD69602A08E37100A55756 /* HealthStateMemoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +80,13 @@
 		7E5720EF2A024F7500C0D049 /* SomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeViewModel.swift; sourceTree = "<group>"; };
 		7E7D5B2C2A0254AA004D870D /* Spring Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Spring Watch App.entitlements"; sourceTree = "<group>"; };
 		7E7D5B2D2A0254CA004D870D /* Spring-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Spring-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C5DD69522A08C2A600A55756 /* AddRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecordView.swift; sourceTree = "<group>"; };
+		C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddConvulsionView.swift; sourceTree = "<group>"; };
+		C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvDurationView.swift; sourceTree = "<group>"; };
+		C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProdromalSymptomsView.swift; sourceTree = "<group>"; };
+		C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionMemoView.swift; sourceTree = "<group>"; };
+		C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvulsionTriggerView.swift; sourceTree = "<group>"; };
+		C5DD69602A08E37100A55756 /* HealthStateMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStateMemoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +192,7 @@
 		7E5720E92A024F2300C0D049 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C5DD69542A08C6B700A55756 /* AddRecordView */,
 				7E5720ED2A024F6C00C0D049 /* SomeView.swift */,
 				04755A522A038268002F4D8C /* HomeView.swift */,
 				04755A542A038272002F4D8C /* ChartView.swift */,
@@ -192,6 +207,28 @@
 				7E5720EF2A024F7500C0D049 /* SomeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C5DD69542A08C6B700A55756 /* AddRecordView */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD69522A08C2A600A55756 /* AddRecordView.swift */,
+				C5DD69602A08E37100A55756 /* HealthStateMemoView.swift */,
+				C5DD69572A08CCE700A55756 /* AddConvulsionView */,
+			);
+			path = AddRecordView;
+			sourceTree = "<group>";
+		};
+		C5DD69572A08CCE700A55756 /* AddConvulsionView */ = {
+			isa = PBXGroup;
+			children = (
+				C5DD69552A08C6EA00A55756 /* AddConvulsionView.swift */,
+				C5DD69582A08CD0A00A55756 /* ConvDurationView.swift */,
+				C5DD695A2A08CD8200A55756 /* ProdromalSymptomsView.swift */,
+				C5DD695C2A08D03100A55756 /* ConvulsionMemoView.swift */,
+				C5DD695E2A08E13800A55756 /* ConvulsionTriggerView.swift */,
+			);
+			path = AddConvulsionView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,12 +346,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5720EE2A024F6C00C0D049 /* SomeView.swift in Sources */,
+				C5DD695B2A08CD8200A55756 /* ProdromalSymptomsView.swift in Sources */,
+				C5DD695D2A08D03100A55756 /* ConvulsionMemoView.swift in Sources */,
+				C5DD69592A08CD0A00A55756 /* ConvDurationView.swift in Sources */,
 				7E5720F02A024F7500C0D049 /* SomeViewModel.swift in Sources */,
 				7E5720EC2A024F5700C0D049 /* Model.swift in Sources */,
 				04755A552A038272002F4D8C /* ChartView.swift in Sources */,
 				04755A532A038268002F4D8C /* HomeView.swift in Sources */,
 				7E5720732A0235A100C0D049 /* ContentView.swift in Sources */,
+				C5DD695F2A08E13800A55756 /* ConvulsionTriggerView.swift in Sources */,
+				C5DD69562A08C6EA00A55756 /* AddConvulsionView.swift in Sources */,
 				04755A572A038286002F4D8C /* MedicineView.swift in Sources */,
+				C5DD69532A08C2A600A55756 /* AddRecordView.swift in Sources */,
+				C5DD69612A08E37100A55756 /* HealthStateMemoView.swift in Sources */,
 				7E5720712A0235A100C0D049 /* SpringApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +501,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spring Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 99KS64JD42;
+				DEVELOPMENT_TEAM = K23A78WQAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Spring-Watch-App-Info.plist";
@@ -465,13 +509,13 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 건강 데이터를 사용하여 사용자에게 더 나은 건강 정보를 제공합니다.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "앱이 건강 데이터를 업데이트하여 사용자의 건강 정보를 개선합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.watching.Spring;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.watching.Springg;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Spring.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Springg.watchkitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -491,7 +535,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spring Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = 99KS64JD42;
+				DEVELOPMENT_TEAM = K23A78WQAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Spring-Watch-App-Info.plist";
@@ -499,13 +543,13 @@
 				INFOPLIST_KEY_NSHealthShareUsageDescription = "앱이 건강 데이터를 사용하여 사용자에게 더 나은 건강 정보를 제공합니다.";
 				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "앱이 건강 데이터를 업데이트하여 사용자의 건강 정보를 개선합니다.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.watching.Spring;
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.watching.Springg;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Spring.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Springg.watchkitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -526,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spring/Preview Content\"";
-				DEVELOPMENT_TEAM = 99KS64JD42;
+				DEVELOPMENT_TEAM = K23A78WQAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Spring;
@@ -541,7 +585,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Spring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Springg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -559,7 +603,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Spring/Preview Content\"";
-				DEVELOPMENT_TEAM = 99KS64JD42;
+				DEVELOPMENT_TEAM = K23A78WQAY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Spring;
@@ -574,7 +618,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Spring;
+				PRODUCT_BUNDLE_IDENTIFIER = com.watching.Springg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
