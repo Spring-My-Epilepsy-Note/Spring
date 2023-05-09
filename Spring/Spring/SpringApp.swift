@@ -7,7 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
-
+import GoogleSignIn
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -16,19 +16,35 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
     return true
   }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
+    }
 }
 
 @main
 struct SpringApp: App {
   // register app delegate for Firebase setup
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject var userViewModel: UserViewModel = UserViewModel()
 
 
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        ContentView()
+          if userViewModel.isLoggedIn {
+              ContentView()
+          }else {
+              LoginView()
+                    .onAppear {
+                GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                }
+            }    .onOpenURL { url in
+                GIDSignIn.sharedInstance.handle(url)
+            }
+          }
       }
+      .environmentObject(userViewModel)
     }
   }
 }
+

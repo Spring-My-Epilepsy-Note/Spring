@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @EnvironmentObject private var userViewModel: UserViewModel
     @State private var tabSelection: Int = 0
 
     var body: some View {
