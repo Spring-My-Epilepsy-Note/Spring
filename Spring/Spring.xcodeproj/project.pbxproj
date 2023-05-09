@@ -116,6 +116,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04877A502A09E6C20094C5FA /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				04877A442A05E9BC0094C5FA /* MypageView.swift */,
+				04877A482A05F2FA0094C5FA /* MypageButton.swift */,
+				04877A4A2A05F3A40094C5FA /* LogoutAlert.swift */,
+				04877A4E2A08D5740094C5FA /* UnregisterAlert.swift */,
+			);
+			path = MyPage;
+			sourceTree = "<group>";
+		};
 		7E5720642A0235A100C0D049 = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +213,7 @@
 				7E5720ED2A024F6C00C0D049 /* SomeView.swift */,
 				04877A322A04CE190094C5FA /* LoginView.swift */,
 				04755A522A038268002F4D8C /* HomeView.swift */,
-				04877A442A05E9BC0094C5FA /* MypageView.swift */,
-				04877A482A05F2FA0094C5FA /* MypageButton.swift */,
-				04877A4A2A05F3A40094C5FA /* LogoutAlert.swift */,
-				04877A4E2A08D5740094C5FA /* UnregisterAlert.swift */,
+				04877A502A09E6C20094C5FA /* MyPage */,
 				04755A542A038272002F4D8C /* ChartView.swift */,
 				04755A562A038286002F4D8C /* MedicineView.swift */,
 			);
